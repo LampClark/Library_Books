@@ -5,6 +5,12 @@
   <title>Elevate - Sinatra ActiveRecord</title>
 </head>
 <body>
+  <% if current_user %> <!-- check if a user is logged in -->
+    <p>Welcome, <%= current_user.username %>!</p>
+    <a href="/logout">Logout</a> <!-- Add the logout button -->
+    <br><br>
+  <% end %>
+
   <%= yield %>
 </body>
 </html>
