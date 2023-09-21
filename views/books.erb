@@ -1,3 +1,5 @@
+<h3>Hello there! <%= current_user.username if current_user %></h3>
+
 <% if @books.any? %>
     <h1>All Books</h1>
     <% @books.each do |book| %>
